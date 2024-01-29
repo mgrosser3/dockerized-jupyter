@@ -1,0 +1,6 @@
+# All data in the workspace should be ignored by Git. 
+workspace/**
+
+# We want to add the workspace folder to the repository
+# to get a clean project structure.
+!workspace/.gitkeep
