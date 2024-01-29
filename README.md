@@ -1,5 +1,7 @@
 # Dockerized Jupyter Environment
 
+<a href="/LICENSE">![License](https://img.shields.io/github/license/mgrosser3/dockerized-jupyter)</a>
+
 This project provides a Dockerfile that can be used to create a Jupyter container.
 [Jupyter](https://jupyter.org/) provides a web-based interactive development environment.
 
