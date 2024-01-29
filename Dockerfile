@@ -29,4 +29,4 @@ RUN $JUPYTER --generate-config
 EXPOSE 10212
 
 # Run Jupyter 
-CMD "$JUPYTER" --no-browser --port=10212 --ip 0.0.0.0
+CMD $JUPYTER --no-browser --port=10212 --ip 0.0.0.0
