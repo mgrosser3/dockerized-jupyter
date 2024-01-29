@@ -28,5 +28,8 @@ ENV PATH=$PATH:/home/jupyter/.local/bin
 RUN $JUPYTER --generate-config
 EXPOSE 10212
 
-# Run Jupyter 
-CMD $JUPYTER --no-browser --port=10212 --ip 0.0.0.0
+# Install dependencies and start Jupyter 
+CMD python -m pip install --upgrade pip; \
+    test -f /home/jupyter/workspace/requirements.txt && python -m pip install -r /home/jupyter/workspace/requirements.txt; \
+    $JUPYTER --no-browser --port=10212 --ip 0.0.0.0
+

@@ -36,3 +36,21 @@ your workspace directory and TAG must be replaced by the tag of the jupyter cont
 ```
 docker run -it --name jupyter -p 10212:10212 -v [WORKSPACE]:/home/jupyter/workspace [TAG]
 ```
+## Install Python Dependencies
+
+### Manually
+
+You can open the terminal in your Jupyter environment and use *pip* to install a Python package.
+
+**Note** that the packages only remain installed for as long as the container exists. If the container is
+recreated, the manually installed packages are no longer available.
+
+### Requirements in Workspace
+
+Each time the container is started, the requirements.txt file in the workspace folder is checked. This means
+that you can change your dependencies via the requirements.txt file to add a new package or change the version
+of a package.
+
+**Note** that you cannot remove a package with the help of the requirements file. Even if you remove an entry,
+the package remains installed. You must remove it manually or recreate the container.
+
